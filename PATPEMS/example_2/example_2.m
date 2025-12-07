@@ -99,7 +99,7 @@ for i = 1:nS
     fprintf('=== Running seed %d of %d: %d ===\n', i, nS, seed_i);
     rng(seed_i, 'twister');
 
-    % Run PEM-SMC-AFP
+    % Run PATPEMS
     [parameter_iteration, out] = PATPEMS(Np, S, bound, logpdf, opts);
 
     % Record wall time (seconds)
